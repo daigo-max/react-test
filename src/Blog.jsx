@@ -8,8 +8,7 @@ class Blog extends React.Component {
     render() {
         return (
             <>
-                <Article />
-                <Article />
+                <Article title={"トラハック"}/>
             </>
         )
     }
