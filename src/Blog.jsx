@@ -5,7 +5,8 @@ class Blog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isPublished: false
+            isPublished: false,
+            count: 0
         }
     }
 
@@ -20,7 +21,12 @@ class Blog extends React.Component {
         const authorName = "Torahack";
         return (
             <>
-                <Article title={"Reactの使い方"} isPublished={this.state.isPublished} toggle={() => this.togglePublished()} />
+                <Article
+                    title={"Reactの使い方"}
+                    isPublished={this.state.isPublished}
+                    toggle={() => this.togglePublished()}
+                    count={this.state.count}
+                    />
             </>
         )
     }
