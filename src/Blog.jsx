@@ -10,12 +10,21 @@ class Blog extends React.Component {
         }
     }
 
+    componentDidMount() {
+        //ボタンがいいねされたらいいねをカウントアップする
+        document.getElementById('counter').addEventListener('click', this.countUp)
+    }
+
     // 公開状態を反転させる関数
     togglePublished = () => {
         this.setState({
             isPublished: !this.state.isPublished
         })
     };
+
+    countUp = () => {
+        this.setState({count: this.state.count + 1 })
+    }
 
     render() {
         const authorName = "Torahack";
