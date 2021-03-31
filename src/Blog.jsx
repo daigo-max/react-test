@@ -1,5 +1,7 @@
 import React from 'react';
 import Article from './Article';
+import {Foo, Bar} from './cpmponents/FooBar';
+import Hoge from './cpmponents/Hoge';
 
 class Blog extends React.Component {
     constructor(props) {
@@ -46,6 +48,9 @@ class Blog extends React.Component {
                     toggle={() => this.togglePublished()}
                     count={this.state.count}
                     />
+                    <Foo />
+                    <Bar />
+                    <Hoge />
             </>
         )
     }
